@@ -75,6 +75,8 @@ abbr,acronym { border: 0;
 
 }
 
+@textonblack: #ffdd00;
+
 .slide-option() {
   position: relative;
   margin: auto;
@@ -123,8 +125,8 @@ abbr,acronym { border: 0;
     position: relative;
     font-size: 0;
     a {
-      font: 13px/24px 'montserrat', Helvetica, Arial, sans-serif;
-      color: #ffffff;
+      font: 16px/24px 'montserrat', Helvetica, Arial, sans-serif;
+      color: @textonblack;
       text-decoration: none;
       text-transform: uppercase;
       margin-right: 40px;
@@ -280,7 +282,7 @@ abbr,acronym { border: 0;
     z-index: 10;
     p{
       font: 19px/28px 'ubuntu', Helvetica, Arial, sans-serif;
-      color: #ffffff;
+      color: @textonblack;
     }
   }
 }
@@ -432,12 +434,12 @@ abbr,acronym { border: 0;
     text-align: center;
     h2{
       font: 40px/40px 'montserrat', Helvetica, Arial, sans-serif;
-      color: #ffffff;
+      color: @textonblack;
     }
     p{
       margin-top: 25px;
       font: 16px/24px 'ubuntu', Helvetica, Arial, sans-serif;
-      color: #ffffff;
+      color: @textonblack;
     }
   }
   .slider{
@@ -564,12 +566,12 @@ abbr,acronym { border: 0;
       text-align: center;
       h3{
         font: 18px/31px 'montserrat', Helvetica, Arial, sans-serif;
-        color: #ffffff;
+        color: @textonblack;
         text-transform: uppercase;
       }
       p{
         font: 14px/23px 'ubuntu', Helvetica, Arial, sans-serif;
-        color: #808080;
+        color: #ffffff;
         text-transform: uppercase;
       }
       &:last-child{
@@ -653,7 +655,7 @@ abbr,acronym { border: 0;
   box-sizing: border-box;
   margin: 0 auto;
   background: linear-gradient(to bottom,#141414 660px,#fff 410px);
-  color: #ffffff;
+  color: @textonblack;
   h2{
     font: 40px/40px 'montserrat', Helvetica, Arial, sans-serif;
     margin: 0 auto;
@@ -719,7 +721,7 @@ abbr,acronym { border: 0;
   .slide-option;
   width: 865px;
   height: 450px;
-  color: #ffffff;
+  color: @textonblack;
   visibility: hidden;
   font-size: 0;
   .contact{
@@ -743,7 +745,7 @@ abbr,acronym { border: 0;
       margin-top: 55px;
       &__city{
         font: 20px/25px 'montserrat', Helvetica, Arial, sans-serif;
-        color: #808080;
+        color: #ffffff;
         text-transform: uppercase;
         margin-bottom: 20px;
       }
