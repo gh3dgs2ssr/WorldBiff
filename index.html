@@ -30,7 +30,19 @@
                 width: 980,
                 loop: true,
                 autoplay: 1000,
-                stopautoplayontouch: false
+                stopautoplayontouch: false,
+                arrows: false
+            });
+        });
+
+        $(function () {
+            $('.proj-slider').fotorama({
+                width: 660,
+                height: 515,
+                loop: true,
+                autoplay: 1000,
+                stopautoplayontouch: false,
+                nav: false
             });
         });
 
@@ -59,6 +71,14 @@
                         $('.stat__chip1').addClass('roll1');
                         $('.stat__chip2').addClass('roll2');
                         $('.stat__chip3').addClass('roll3');
+                        $('.stat-block__project').addClass('stat-block__project--visible');
+                        $('.stat-block__customer').addClass('stat-block__customer--visible');
+                        $('.stat-block__user').addClass('stat-block__user--visible');
+                        $('.introduce').addClass('introduce--animate');
+                    }
+                    if (index === 6) {
+                        $('.contact').addClass('contact--move');
+                        $('.question').addClass('question--move');
                     }
                 }
             });
@@ -82,255 +102,312 @@
 </header>
 
 <div id="fullpage">
-    <div class="section " id="section0">
-        <div class="home-slide">
-            <a href="http://www.youtube.com"><img src="img/bg.jpg" alt=""></a>
+<div class="section " id="section0">
+    <div class="home-slide">
+        <a href="http://www.youtube.com"><img src="img/bg.jpg" alt=""></a>
 
-            <div class="text">
-                <p>World Biff wide array of&nbsp;premiere table games, including such classic favorites
-                    as&nbsp;roulette, and blackjack, among others, are built to&nbsp;bring the very best
-                    of&nbsp;the land-based gaming experience to&nbsp;the player.</p>
-            </div>
+        <div class="text">
+            <p>World Biff wide array of&nbsp;premiere table games, including such classic favorites
+                as&nbsp;roulette, and blackjack, among others, are built to&nbsp;bring the very best
+                of&nbsp;the land-based gaming experience to&nbsp;the player.</p>
         </div>
-        <a href="#WorldBiff">
-            <div class="arrow"></div>
-        </a>
     </div>
-    <div class="section " id="section1">
-        <div class="world-biff-slide">
-            <div class="introduce">
-                <img src="img/logo_black.png" alt="logo">
-
-                <p>All of&nbsp;our top-tier games are supported by&nbsp;a&nbsp;robust, modular and entirely customizable
-                    back office software suite. This state-of-the-art system is&nbsp;ideal for making the most of&nbsp;your
-                    BetSoft catalog, providing you with the tools you need to&nbsp;track trends and individual player
-                    activity.</p>
-            </div>
-
-            <div class="stat">
-                <!--Todo: сделать 1 крутилку, если это анимация норм-->
-                <div class="stat__container1">
-                    <div class="stat__chip1"></div>
-                </div>
-                <div class="stat__container2">
-                    <div class="stat__chip2"></div>
-                </div>
-                <div class="stat__container3">
-                    <div class="stat__chip3"></div>
-                </div>
-                <div class="stat-block stat-block-project">
-                    <strong>7</strong>
-
-                    <p>Realized projects</p>
-                </div>
-                <div class="stat-block stat-block-customer">
-                    <strong>18</strong>
-
-                    <p>Satisfied customers</p>
-                </div>
-                <div class="stat-block stat-block-user">
-                    <strong>64 340</strong>
-
-                    <p>Users of our services</p>
-                </div>
-            </div>
-        </div>
-        <a href="#WhatWeDo">
-            <div class="arrow"></div>
-        </a>
-    </div>
-    <div class="section " id="section2">
-        <div class="what-we-do-slide">
-            <div class="wwd">
-                <h2>What We Do?</h2>
-
-                <p>We are devoted to our partners, and as such, our dedicated customer support team is available
-                    at all times, ready to cheerfully assist with your needs and questions. </p>
-            </div>
-            <div class="fotorama">
-                <div class="container fotorama__select">
-                    <div class="container--devolopment">
-                        <div class="block">
-                            <img src="img/search.png">
-                            <h3>Analysis of the problem</h3>
-                            <p>Discussion with the project manager Formulation development time Formation
-                                of&nbsp;Working Group</p>
-                        </div>
-                        <div class="block">
-                            <img src="img/design.png">
-                            <h3>Design and development</h3>
-                            <p>Formation of&nbsp;the overall style Development of&nbsp;user-friendly interface System
-                                Design</p>
-                        </div>
-                        <div class="block">
-                            <img src="img/cogwheel.png">
-                            <h3>Testing</h3>
-                            <p>Debugging</p>
-                            <p>Alteration</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="container fotorama__select">
-                    <div class="container--introduction">
-                        <div class="block">
-                            <img src="img/search.png">
-                            <h3>Running the Project</h3>
-                            <p>Support </p>
-                        </div>
-                        <div class="block">
-                            <img src="img/design.png">
-                            <h3>Training of Staff</h3>
-                        </div>
-                        <div class="block">
-                            <img src="img/cogwheel.png">
-                            <h3>Consultations</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="container fotorama__select">
-                    <div class="container--outsourcing">
-                        <div class="block">
-                            <img src="img/search.png">
-                            <h3>Support the project </h3>
-                        </div>
-                        <div class="block">
-                            <img src="img/design.png">
-                            <h3>Tight integration - full client control</h3>
-                        </div>
-                        <div class="block">
-                            <img src="img/cogwheel.png">
-                            <h3>The rollback option to fine-tune</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="container fotorama__select">
-                    <div class="container--ready-solution">
-                        <div class="block">
-                            <img src="img/search.png">
-                            <h3>Connection to third party systems</h3>
-                            <p>Support </p>
-                        </div>
-                        <div class="block">
-                            <img src="img/design.png">
-                            <h3>The introduction of ready-made solutions</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--<div class="slider-control">-->
-                <!--<div class="control-slide"><p>Development</p></div>-->
-                <!--<div class="control-slide"><p>Introduction</p></div>-->
-                <!--<div class="control-slide"><p>Outsourcing</p></div>-->
-                <!--<div class="control-slide"><p>Testing</p></div>-->
-                <!--</div>-->
-            </div>
-        </div>
-        <a href="#Technologies">
-            <div class="arrow"></div>
-        </a>
-    </div>
-    <div class="section " id="section3">
-        <div class="technologies-slide">
-            <h2>Technologies</h2>
+    <a href="#WorldBiff">
+        <div class="arrow"></div>
+    </a>
+</div>
+<div class="section " id="section1">
+    <div class="world-biff-slide">
+        <div class="introduce">
+            <img src="img/logo_black.png" alt="logo">
 
             <p>All of&nbsp;our top-tier games are supported by&nbsp;a&nbsp;robust, modular and entirely customizable
                 back office software suite. This state-of-the-art system is&nbsp;ideal for making the most of&nbsp;your
                 BetSoft catalog, providing you with the tools you need to&nbsp;track trends and individual player
                 activity.</p>
+        </div>
 
-            <div class="item">
-                <div class="item-small">
-                    <h3>Security</h3>
-                    <a href="#">System is ideal</a><br>
-                    <a href="#">BetSoft catalog</a><br>
-                    <a href="#">Ideal for making</a><br>
-                    <a href="#">BetSoft</a><br>
-                    <a href="#">Providing</a><br>
-                    <a href="#">Tools</a>
-                </div>
-                <div class="item-small">
-                    <h3>Technologies</h3>
-                    <a href="#">System is ideal</a><br>
-                    <a href="#">BetSoft catalog</a><br>
-                    <a href="#">Ideal for making</a><br>
-                    <a href="#">BetSoft</a><br>
-                    <a href="#">Providing</a><br>
-                    <a href="#">Tools</a>
-                </div>
-                <div class="item-big">
-                    <p>This state-of-the-art system is&nbsp;ideal for making the most of&nbsp;your BetSoft catalog.
-                        This state-of-the-art system is&nbsp;ideal for making the most of&nbsp;your BetSoft catalog,
-                        providing you with the tools you need</p>
-                </div>
+        <div class="stat">
+            <!--Todo: сделать 1 крутилку, если это анимация норм-->
+            <div class="stat__container1">
+                <div class="stat__chip1"></div>
+            </div>
+            <div class="stat__container2">
+                <div class="stat__chip2"></div>
+            </div>
+            <div class="stat__container3">
+                <div class="stat__chip3"></div>
+            </div>
+            <div class="stat-block stat-block__project">
+                <strong>7</strong>
+
+                <p>Realized projects</p>
+            </div>
+            <div class="stat-block stat-block__customer">
+                <strong>18</strong>
+
+                <p>Satisfied customers</p>
+            </div>
+            <div class="stat-block stat-block__user">
+                <strong>64 340</strong>
+
+                <p>Users of our services</p>
             </div>
         </div>
-        <a href="#OurProjects">
+    </div>
+    <a href="#WhatWeDo">
+        <div class="arrow"></div>
+    </a>
+</div>
+<div class="section " id="section2">
+    <div class="what-we-do-slide">
+        <div class="wwd">
+            <h2>What We Do?</h2>
+
+            <p>We are devoted to our partners, and as such, our dedicated customer support team is available
+                at all times, ready to cheerfully assist with your needs and questions. </p>
+        </div>
+        <div class="fotorama">
+            <div class="container fotorama__select">
+                <div class="container--devolopment">
+                    <div class="block">
+                        <img src="img/search.png">
+
+                        <h3>Analysis of the problem</h3>
+
+                        <p>Discussion with the project manager Formulation development time Formation
+                            of&nbsp;Working Group</p>
+                    </div>
+                    <div class="block">
+                        <img src="img/design.png">
+
+                        <h3>Design and development</h3>
+
+                        <p>Formation of&nbsp;the overall style Development of&nbsp;user-friendly interface System
+                            Design</p>
+                    </div>
+                    <div class="block">
+                        <img src="img/cogwheel.png">
+
+                        <h3>Testing</h3>
+
+                        <p>Debugging</p>
+
+                        <p>Alteration</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container fotorama__select">
+                <div class="container--introduction">
+                    <div class="block">
+                        <img src="img/search.png">
+
+                        <h3>Running the Project</h3>
+
+                        <p>Support </p>
+                    </div>
+                    <div class="block">
+                        <img src="img/design.png">
+
+                        <h3>Training of Staff</h3>
+                    </div>
+                    <div class="block">
+                        <img src="img/cogwheel.png">
+
+                        <h3>Consultations</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="container fotorama__select">
+                <div class="container--outsourcing">
+                    <div class="block">
+                        <img src="img/search.png">
+
+                        <h3>Support the project </h3>
+                    </div>
+                    <div class="block">
+                        <img src="img/design.png">
+
+                        <h3>Tight integration - full client control</h3>
+                    </div>
+                    <div class="block">
+                        <img src="img/cogwheel.png">
+
+                        <h3>The rollback option to fine-tune</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="container fotorama__select">
+                <div class="container--ready-solution">
+                    <div class="block">
+                        <img src="img/search.png">
+
+                        <h3>Connection to third party systems</h3>
+
+                        <p>Support </p>
+                    </div>
+                    <div class="block">
+                        <img src="img/design.png">
+
+                        <h3>The introduction of ready-made solutions</h3>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="slider-control">-->
+            <!--<div class="control-slide"><p>Development</p></div>-->
+            <!--<div class="control-slide"><p>Introduction</p></div>-->
+            <!--<div class="control-slide"><p>Outsourcing</p></div>-->
+            <!--<div class="control-slide"><p>Testing</p></div>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <a href="#Technologies">
+        <div class="arrow"></div>
+    </a>
+</div>
+<div class="section " id="section3">
+    <div class="technologies-slide">
+        <h2>Technologies</h2>
+
+        <p>All of&nbsp;our top-tier games are supported by&nbsp;a&nbsp;robust, modular and entirely customizable
+            back office software suite. This state-of-the-art system is&nbsp;ideal for making the most of&nbsp;your
+            BetSoft catalog, providing you with the tools you need to&nbsp;track trends and individual player
+            activity.</p>
+
+        <div class="item">
+            <div class="item-small">
+                <h3>Security</h3>
+                <a href="#">System is ideal</a><br>
+                <a href="#">BetSoft catalog</a><br>
+                <a href="#">Ideal for making</a><br>
+                <a href="#">BetSoft</a><br>
+                <a href="#">Providing</a><br>
+                <a href="#">Tools</a>
+            </div>
+            <div class="item-small">
+                <h3>Technologies</h3>
+                <a href="#">System is ideal</a><br>
+                <a href="#">BetSoft catalog</a><br>
+                <a href="#">Ideal for making</a><br>
+                <a href="#">BetSoft</a><br>
+                <a href="#">Providing</a><br>
+                <a href="#">Tools</a>
+            </div>
+            <div class="item-big">
+                <p>This state-of-the-art system is&nbsp;ideal for making the most of&nbsp;your BetSoft catalog.
+                    This state-of-the-art system is&nbsp;ideal for making the most of&nbsp;your BetSoft catalog,
+                    providing you with the tools you need</p>
+            </div>
+        </div>
+    </div>
+    <a href="#OurProjects">
+        <div class="arrow"></div>
+    </a>
+</div>
+<div class="section " id="section4">
+    <div class="our-project-slide">
+        <div class="black"></div>
+        <h2>Our Projects</h2>
+
+        <p>We&nbsp;are devoted to&nbsp;our partners, and as&nbsp;such, our dedicated customer support team
+            is&nbsp;available at&nbsp;all times, ready to&nbsp;cheerfully assist with your needs and
+            questions.</p>
+
+        <div class="proj-slider">
+            <div class="proj-slide">
+                <img src="img/macbook.png">
+
+                <h3>Matis Features</h3>
+                <a href="http://casino-matis.com" class="site">casino-matis.com</a>
+            </div>
+            <div class="proj-slide">
+                <img src="img/bg.jpg">
+
+                <h3>Matis Features</h3>
+                <a href="http://casino-matis.com" class="site">casino-matis.com</a>
+            </div>
+        </div>
+        <div class="descript">
+            <div class="descript_box">
+                <h4>Secure play</h4>
+
+                <p>Constant updating of games, adding more than 10 new games a year</p>
+            </div>
+            <div class="descript_box">
+                <h4>Education games</h4>
+
+                <p>The ultimate gaming system (compatible with the lottery legislation)</p>
+            </div>
+            <div class="descript_box">
+                <h4>Easy integration</h4>
+
+                <p>Easy integration of third party into an existing gaming site</p>
+            </div>
+        </div>
+        <a href="#ContactUs">
             <div class="arrow"></div>
         </a>
     </div>
-    <div class="section " id="section4">
-            <div class="our-project-slide">
-                <h2>Our Projects</h2>
+</div>
+<div class="section " id="section5">
+    <div class="contact-us-slide">
+        <div class="contact">
+            <h2>Contact us</h2>
 
-                <p>We&nbsp;are devoted to&nbsp;our partners, and as&nbsp;such, our dedicated customer support team
-                    is&nbsp;available at&nbsp;all times, ready to&nbsp;cheerfully assist with your needs and
-                    questions.</p>
-                <div class="proj-slider">
-                    <img src="img/macbook.png">
-                    <h3>Matis Features</h3>
-                    <a href="http://casino-matis.com" class="site">casino-matis.com</a>
-                </div>
-                <div class="descript">
-                    <div class="descript_box">
-                        <h4>Secure play</h4>
-                        <p>Constant updating of games, adding more than 10 new games a year</p>
-                    </div>
-                    <div class="descript_box">
-                        <h4>Education games</h4>
-                        <p>The ultimate gaming system (compatible with the lottery legislation)</p>
-                    </div>
-                    <div class="descript_box">
-                        <h4>Easy integration</h4>
-                        <p>Easy integration of third party into an existing gaming site</p>
-                    </div>
-                </div>
-                <a href="#ContactUs">
-                    <div class="arrow"></div>
-                </a>
+            <div class="address">
+                <p class="address__city">Columbus, Usa</p>
+
+                <p class="address__general">4225 University Avenue Columbus, Georgia 31907</p>
+
+                <p class="address__general">+7 (706) 507 88 00</p>
+                <a href="mailto:usa@worldbiff.ru" class="address__email">usa@worldbiff.ru</a>
             </div>
-    </div>
-    <div class="section " id="section5">
-        <div class="contact-us-slide">
-            <div class="contact">
-                <h2>Contact us</h2>
-                <div class="address">
-                    <p class="address__city">Columbus, Usa</p>
-                    <p class="address__general">4225 University Avenue Columbus, Georgia 31907</p>
-                    <p class="address__general">+7 (706) 507 88 00</p>
-                    <a href="mailto:usa@worldbiff.ru" class="address__email">usa@worldbiff.ru</a>
-                </div>
-                <div class="address">
-                    <p class="address__city">London, UK</p>
-                    <p class="address__general">Malet Street, London WC1E 7HU</p>
-                    <p class="address__general">+44 (0) 20 7862 8000</p>
-                    <a href="mailto:usa@worldbiff.ru" class="address__email">europe@worldbiff.ru</a>
-                </div>
+            <div class="address">
+                <p class="address__city">London, UK</p>
+
+                <p class="address__general">Malet Street, London WC1E 7HU</p>
+
+                <p class="address__general">+44 (0) 20 7862 8000</p>
+                <a href="mailto:usa@worldbiff.ru" class="address__email">europe@worldbiff.ru</a>
             </div>
-            <div class="question">
-                <h2>Submit a question to our support team</h2>
-                <form>
-                    <input type="text" placeholder="Your name">
-                    <input type="text" placeholder="E-mail">
-                    <select>
+        </div>
+        <div class="question">
+            <h2>Submit a question to our support team</h2>
+
+            <form>
+                <input type="text" placeholder="Your name">
+                <input type="text" placeholder="E-mail">
+                <div class="box-select">
+                    <select id="select">
                         <option selected>Сategory</option>
                         <option>1</option>
                         <option>2</option>
                     </select>
-                    <textarea name="message" placeholder="Message"></textarea>
-                    <input type="submit" value="Send">
-                </form>
-            </div>
+                </div>
+                <textarea name="message" placeholder="Message"></textarea>
+                <button class="btn btn-7 btn-text text">Send</button>
+            </form>
         </div>
     </div>
 </div>
+</div>
+
+<script src="js/classie.js"></script>
+<script>
+    var buttons7Click = Array.prototype.slice.call( document.querySelectorAll( '.question button' ) ),
+            totalButtons7Click = buttons7Click.length;
+
+    buttons7Click.forEach( function( el, i ) { el.addEventListener( 'click', activate, false ); } );
+
+    function activate() {
+        var self = this, activatedClass = 'btn-activated';
+
+        if( !classie.has( this, activatedClass ) ) {
+            classie.add( this, activatedClass );
+            setTimeout( function() { classie.remove( self, activatedClass ) }, 1000 );
+        }
+    }
+</script>
+
 </body>
 </html>

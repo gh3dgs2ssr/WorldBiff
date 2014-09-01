@@ -82,6 +82,7 @@ abbr,acronym { border: 0;
   height: 690px;
   background-color: transparent;
   box-sizing: border-box;
+  padding-top: 95px;
 }
 
 .header {
@@ -99,6 +100,7 @@ abbr,acronym { border: 0;
   background-color: rgba(0, 0, 0, .3);
   transition: all .2s ease-in 0s;
   .logo {
+    z-index: 2;
     float: left;
     position: relative;
     margin-right: 10px;
@@ -116,6 +118,7 @@ abbr,acronym { border: 0;
     }
   }
   .nav {
+    z-index: 1;
     margin-top: 25px;
     position: relative;
     font-size: 0;
@@ -241,8 +244,27 @@ abbr,acronym { border: 0;
   }
 }
 
+@keyframes movecontact {
+  0% {
+    left: -200px
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes movequestion {
+  0% {
+    left: 585px;
+  }
+  100% {
+    left: 385px;
+  }
+}
+
 .home-slide{
   .slide-option;
+  padding-top: 0;
   img{
     height: 100%;
     max-height: 690px;
@@ -265,12 +287,13 @@ abbr,acronym { border: 0;
 
 .world-biff-slide{
   .slide-option;
-  padding-top: 80px;
   .introduce {
     width: 580px;
     height: 240px;
     display: block;
     margin: 0 auto 70px;
+    transform: scale(.5);
+    transition: transform .5s ease .3s;
     img {
       display: block;
       height: 109px;
@@ -279,6 +302,9 @@ abbr,acronym { border: 0;
     p {
       font: 16px/26px 'ubuntu', Helvetica, Arial, sans-serif;
       text-align: center;
+    }
+    &--animate{
+      transform: scale(1);
     }
   }
   .stat {
@@ -291,7 +317,7 @@ abbr,acronym { border: 0;
       z-index: 3;
       display: block;
       visibility: hidden;
-      transition: visibility 0s esea-in 0s;
+      transition: visibility 0s ease-in 0s;
       position: absolute;
       top: 0;
       left: 142px;
@@ -300,7 +326,7 @@ abbr,acronym { border: 0;
       z-index: 2;
       display: block;
       visibility: hidden;
-      transition: visibility 0s esea-in 0s;
+      transition: visibility 0s ease-in 0s;
       position: absolute;
       top: 0;
       left: 442px;
@@ -309,7 +335,7 @@ abbr,acronym { border: 0;
       z-index: 1;
       display: block;
       visibility: hidden;
-      transition: visibility 0s esea-in 0s;
+      transition: visibility 0s ease-in 0s;
       position: absolute;
       top: 0;
       left: 742px;
@@ -353,15 +379,12 @@ abbr,acronym { border: 0;
       visibility:visible;
       transition-delay:0s;
     }
-    &-show {
-      display: block;
-    }
     &-block {
       top: 130px;
       position: absolute;
       display: block;
       height: 75px;
-      width: 140px;
+      width: 160px;
       text-align: center;
       strong {
         font: 50px/76px 'roboto_slab', Helvetica, Arial, sans-serif;
@@ -371,16 +394,29 @@ abbr,acronym { border: 0;
         padding: 0;
         font: 15px/26px 'ubuntu', Helvetica, Arial, sans-serif;
       }
-      &-project {
-        left: 117px;
+      &__project {
+        left: 107px;
+        opacity: 0;
+        transition: opacity .2s linear .7s;
+        &--visible{
+          opacity: 1;
+        }
       }
-      &-customer {
-        width: 150px;
+      &__customer {
         left: 412px;
+        opacity: 0;
+        transition: opacity .2s linear 1s;
+        &--visible{
+          opacity: 1;
+        }
       }
-      &-user {
-        width: 160px;
+      &__user {
         left: 712px;
+        opacity: 0;
+        transition: opacity .2s linear 1.3s;
+        &--visible{
+          opacity: 1;
+        }
       }
     }
   }
@@ -388,7 +424,6 @@ abbr,acronym { border: 0;
 
 .what-we-do-slide{
   .slide-option;
-  padding-top: 90px;
   .wwd{
     margin: 0 auto;
     display: block;
@@ -500,25 +535,10 @@ abbr,acronym { border: 0;
       display: block;
       width: 980px;
       height: 300px;
-      &--devolopment{
-        margin: 0 auto;
-        width: 935px;
-        height: 300px;
-        display: block;
-        font-size: 0;
-        box-sizing: border-box;
-        padding: 35px 0;
-      }
-      &--introduction{
-        margin: 0 auto;
-        width: 935px;
-        height: 300px;
-        display: block;
-        font-size: 0;
-        box-sizing: border-box;
-        padding: 35px 0;
-      }
-      &--outsourcing{
+      &--devolopment,
+      &--introduction,
+      &--outsourcing,
+      &--ready-solution {
         margin: 0 auto;
         width: 935px;
         height: 300px;
@@ -528,13 +548,7 @@ abbr,acronym { border: 0;
         padding: 35px 0;
       }
       &--ready-solution{
-        margin: 0 auto;
         width: 610px;
-        height: 300px;
-        display: block;
-        font-size: 0;
-        box-sizing: border-box;
-        padding: 35px 0;
       }
       &:after{
         content: '';
@@ -567,7 +581,6 @@ abbr,acronym { border: 0;
 
 .technologies-slide{
   .slide-option;
-  padding-top: 90px;
   color: #1a1a1a1;
   h2{
     font: 40px/40px 'montserrat', Helvetica, Arial, sans-serif;
@@ -575,7 +588,7 @@ abbr,acronym { border: 0;
     text-transform: uppercase;
   }
   p{
-    margin: 25px auto 0;
+    margin: 35px auto 0;
     font: 16px/24px 'ubuntu', Helvetica, Arial, sans-serif;
     width: 580px;
   }
@@ -622,6 +635,15 @@ abbr,acronym { border: 0;
   }
 }
 
+.black{
+  top:0;
+  position: absolute;
+  height: 660px;
+  z-index: -1;
+  width: 100%;
+  background-color: #141414;
+}
+
 .our-project-slide{
   position: relative;
   width: 100%;
@@ -642,20 +664,29 @@ abbr,acronym { border: 0;
     font: 16px/26px 'ubuntu', Helvetica, Arial, sans-serif;
     width: 580px;
   }
-  .proj-slider{
-    margin: 70px auto 0;
-    height: 515px;
-    width: 660px;
-    text-align: center;
-    h3{
-      margin: 55px auto 15px;
-      font: 30px/26px 'montserrat', Helvetica, Arial, sans-serif;
-      text-transform: uppercase;
-      color: #1a1a1a;
+  .proj{
+    &-slider{
+      margin: 70px auto 0;
+      height: 515px;
+      width: 660px;
+      text-align: center;
     }
-    .site{
-      font: 16px/26px 'ubuntu', Helvetica, Arial, sans-serif;
-      color: #00a3d2;
+    &-slide{
+      img{
+        height: auto;
+        max-height: 380px;
+        max-width: 100%;
+      }
+      h3{
+        margin: 55px auto 15px;
+        font: 30px/26px 'montserrat', Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        color: #1a1a1a;
+      }
+      .site{
+        font: 16px/26px 'ubuntu', Helvetica, Arial, sans-serif;
+        color: #00a3d2;
+      }
     }
   }
   .descript{
@@ -677,7 +708,7 @@ abbr,acronym { border: 0;
       }
       p{
         font: 16px/26px 'ubuntu', Helvetica, Arial, sans-serif;
-        width: initial;
+        width: 220px;
         margin-top: 20px;
       }
     }
@@ -689,10 +720,17 @@ abbr,acronym { border: 0;
   width: 865px;
   height: 450px;
   color: #ffffff;
+  visibility: hidden;
   font-size: 0;
   .contact{
+    &--move{
+      animation: movecontact .5s ease-in;
+      visibility: visible;
+    }
+    position: absolute;
+    top: 0;
+    left: 0;
     text-align: left;
-    float: left;
     height: 450px;
     width: 385px;
     h2{
@@ -719,12 +757,19 @@ abbr,acronym { border: 0;
     }
   }
   .question{
-    float: left;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 385px;
     height: 450px;
     width: 480px;
     box-sizing: border-box;
     padding-left: 45px;
     text-align: left;
+    &--move{
+      animation: movequestion .5s ease-in;
+      visibility: visible;
+    }
     h2{
       font: 16px/36px 'montserrat', Helvetica, Arial, sans-serif;
       text-transform: uppercase;
@@ -732,10 +777,10 @@ abbr,acronym { border: 0;
     }
     input,
     select,
-    textarea{
+    textarea {
+      border-radius: 3px;
       height: 40px;
       width: 375px;
-      border-radius: 3px;
       border: none;
       margin-bottom: 20px;
       padding: 0px 10px;
@@ -743,17 +788,118 @@ abbr,acronym { border: 0;
     }
     select{
       color: #333333;
-      background: #b2b2b2;
+      background: transparent;
       width: 395px;
+      margin-bottom: 0px;
+      -webkit-appearance: none;
     }
     textarea{
       resize: none;
       height: 100px;
     }
-    input[type=submit]{
-      width: 145px;
+    .box-select{
+      height: 40px;
+      border-radius: 3px;
+      width: 395px;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+      background: url(../img/arrow.png) no-repeat right #b2b2b2;
+      z-index: 3;
+    }
+    .btn {
+      border: none;
+      font: 16px/26px 'ubuntu', Helvetica, Arial, sans-serif;
       color: #ffffff;
+      cursor: pointer;
+      width: 145px;
+      height: 40px;
+      display: inline-block;
+      outline: none;
+      position: relative;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+      z-index: 100;
+    }
+
+    .text:before {
+      content: "Send";
+    }
+
+    .btn-text {
+      font-size: 0;
+    }
+
+    .btn-text:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 16px;
+      line-height: 40px;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .btn:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+
+    .btn-7 {
       background: #00a3d2;
+      color: #fff;
+      border-radius: 7px;
+      overflow: hidden;
+    }
+
+    .btn-7:before {
+      color: #fff;
+      z-index: 1;
+    }
+
+    .btn-7:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      z-index: 0;
+      width: 0;
+      background: #1E8BC3;
+      -webkit-transition: none;
+      -moz-transition: none;
+      transition: none;
+    }
+
+    .btn-7.btn-activated:after {
+      -webkit-animation: fillToRight 0.7s forwards;
+      -moz-animation: fillToRight 0.7s forwards;
+      animation: fillToRight 0.7s forwards;
+    }
+
+    @-webkit-keyframes fillToRight {
+      to {
+        width: 100%;
+      }
+    }
+
+    @-moz-keyframes fillToRight {
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes fillToRight {
+      to {
+        width: 100%;
+      }
     }
   }
 }
