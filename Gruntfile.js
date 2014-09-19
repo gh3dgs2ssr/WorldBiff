@@ -12,9 +12,7 @@ module.exports = function (grunt) {
         less: {
             development: {
                 options: {
-                    compress: true,
-                    yuicompress: false,
-                    optimization: 0
+                    cleancss: true
                 },
                 files: {
                     "css/style.css": "css/style.less"
